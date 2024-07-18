@@ -1,5 +1,6 @@
 package ru.netology.rest;
 
+
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.filter.log.LogDetail;
 import io.restassured.http.ContentType;
@@ -9,7 +10,7 @@ import org.junit.jupiter.api.Test;
 import static io.restassured.RestAssured.given;
 
 class MobileBankApiTestV6 {
-    private final RequestSpecification requestSpec = new RequestSpecBuilder()
+    private RequestSpecification requestSpec = new RequestSpecBuilder()
             .setBaseUri("http://localhost")
             .setBasePath("/api/v1")
             .setPort(9999)
@@ -32,4 +33,3 @@ class MobileBankApiTestV6 {
                 .statusCode(200);
     }
 }
-
